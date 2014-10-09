@@ -1,5 +1,8 @@
 ---
-published: true
+layout: post
+category: blog
+published: false
+title: Untitled
 ---
 
 ## A New Post through http://prose.io
