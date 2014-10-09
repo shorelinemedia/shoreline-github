@@ -24,7 +24,7 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "blog"
+          value: "post"
       - name: "title"
         field:
           element: "text"
@@ -32,4 +32,5 @@ prose:
           value: ""
 
 # Build settings
-markdown: kramdown
+markdown: rdiscount
+permalink: pretty
