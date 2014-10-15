@@ -15,14 +15,6 @@ prose:
   media: 'media'
   metadata:
     _posts:
-      - name: "category"
-        field:
-          element: "hidden"
-          value: "blog"
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "blog"
       - name: "title"
         field:
           element: "text"
