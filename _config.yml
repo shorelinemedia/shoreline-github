@@ -20,6 +20,11 @@ prose:
           element: "text"
           label: "Title"
           value: ""
+      - name: "categories"
+        field:
+          element: "text"
+          label: "Categories"
+          value: ""
       - name: "splash"
         field:
           element: "text"
