@@ -33,6 +33,11 @@ prose:
           element: "text"
           label: "Splash image"
           value: ""
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          value: ""
 
 # Build settings
 markdown: rdiscount
