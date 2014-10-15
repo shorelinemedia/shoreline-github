@@ -3,6 +3,7 @@ layout: post
 category: blog
 published: true
 title: A Newer Test Post
+permalink: /test2/
 ---
 
 ## A New Post
