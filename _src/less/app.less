@@ -1,0 +1,82 @@
+// App Styles
+@charset "utf-8";
+@import "bootstrap/less/bootstrap";
+
+// Our variables
+@base-font-family: Helvetica, Arial, sans-serif;
+@base-font-size:   16px;
+@small-font-size:  @base-font-size * 0.875;
+@base-line-height: 1.5;
+
+@spacing-unit:     30px;
+
+@text-color:       #111;
+@background-color: #fdfdfd;
+@brand-color:      #2a7ae2;
+
+@black-color:      #777;
+@grey-color:       #828282;
+@grey-color-light: lighten(@grey-color, 40%);
+@grey-color-dark:  darken(@grey-color, 25%);
+
+@color-green:      #91e842;
+@color-lime-green: #d2ff52;
+
+
+@headline-font: "Oswald", "Franklin Gothic", Impact, Helvetica, sans-serif;
+
+
+
+// Mixins
+
+.radial-gradient(@color1; @color2) {
+  background: @color1; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  @color1 0%, @color2 100%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@color1), color-stop(100%,@color2)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  @color1 0%,@color2 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  @color1 0%,@color2 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color1', endColorstr='@color2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+body, html {
+  color: @black-color;
+  position: relative;
+  height: 100%;
+  .radial-gradient(@color-lime-green; @color-green);
+
+
+}
+a, a:visited {
+  color: #222;
+}
+.splash {
+  font-family: @headline-font;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 291px;
+  height: 96px;
+  margin-left: -146px;
+  margin-top: -96px;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  .title {
+    a {
+
+    }
+  }
+
+  p {
+    text-align: center;
+    a { font-weight: 400; }
+  }
+}

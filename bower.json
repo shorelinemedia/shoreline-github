@@ -1,0 +1,23 @@
+{
+  "name": "shoreline-media.github.io",
+  "version": "1.0.0",
+  "authors": [
+    "Chris Matthias <chris.matthias@gmail.com>"
+  ],
+  "description": "Github pages site for Shoreline Media Marketing Solutions",
+  "license": "MIT",
+  "homepage": "http://www.shorelinemediamarketing.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Thumbs.db"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery.scrollTo": "~1.4.14"
+  }
+}
