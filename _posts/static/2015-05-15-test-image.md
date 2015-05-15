@@ -1,9 +1,10 @@
 ---
 layout: page
-published: false
+published: true
 title: Test Image
 permalink: "test-image"
 ---
+
 
 ## A New Post
 
