@@ -3,7 +3,7 @@ title: Shoreline Media Marketing on Github
 email: team@shorelinemedianj.com
 description: Shoreline Media Marketing provides full service web marketing including web design and development, SEO, Content Strategies, Social Media Marketing, Pay-Per-Click Ad Management and more. Visit http://www.shorelinemediamarketing.com
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://shoreline-media.github.io" # the base hostname & protocol for your site
+url: "http://shorelinemedia.github.io" # the base hostname & protocol for your site
 twitter_username: shorelinenj
 github_username:  shoreline-media
 permalink: pretty
@@ -11,8 +11,8 @@ exclude: ['Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules']
 
 prose:
   rooturl: '_posts'
-  siteurl: 'http://shoreline-media.github.io/'
-  relativeLinks: 'http://shoreline-media.github.io/links.jsonp'
+  siteurl: 'http://shorelinemedia.github.io/'
+  relativeLinks: 'http://shorelinemedia.github.io/links.jsonp'
   media: 'media'
   ignore:
     - _config.yml
