@@ -1,0 +1,64 @@
+---
+layout: splash
+title: Shoreline Media Marketing on Github
+permalink: /
+---
+<script src="//www.parsecdn.com/js/parse-1.2.16.min.js"></script>
+
+<div class="splash">
+
+  <h1 class="title"><a href="http://www.shorelinemediamarketing.com"><img alt="Shoreline Media Marketing" src="/images/shoreline-media-marketing.png"/></a></h1>
+  <p><a href="http://www.shorelinemediamarketing.com">www.shorelinemediamarketing.com</a></p>
+
+</div>
+
+<div class="contact-form">
+  <div id="form-response"></div>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Name"><br />
+
+    <label for="emailAddress">Email Address:</label>
+    <input type="email" name="email" id="email" placeholder="Email address"><br />
+
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" cols="10" placeholder="Your message"></textarea><br />
+
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+  $(document).ready(function(){
+
+    // Initialize Parse with your Parse application & javascript keys
+    Parse.initialize("xFxMfNpIfOjGD9pIFx7Q3jC0y8dSJgeJ8", "jhxWbls6wDXOiMO9ei5aj3NyFhPEbayjGRKmKsqm");
+
+    // Setup the form to watch for the submit event
+    $('.contact-form form').submit(function(e){
+      e.preventDefault();
+
+      // Grab the elements from the form to make up
+      // an object containing name, email and message
+      var data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      }
+
+      // Run our Parse Cloud Code and
+      // pass our 'data' object to it
+      Parse.Cloud.run("sendEmail", data, {
+        success: function(object) {
+          $('#form-response').html('Email sent!').addClass('success').fadeIn('fast');
+        },
+
+        error: function(object, error) {
+          console.log(error);
+          $('#form-response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+        }
+      });
+    });
+
+  });
+</script>
