@@ -3,27 +3,37 @@
 @import "bootstrap/less/bootstrap";
 
 // Our variables
-@base-font-family: Helvetica, Arial, sans-serif;
-@base-font-size:   16px;
-@small-font-size:  @base-font-size * 0.875;
-@base-line-height: 1.5;
+@base-font-family:   Helvetica, Arial, sans-serif;
+@base-font-size:     16px;
+@small-font-size:    @base-font-size * 0.875;
+@base-line-height:   1.5;
 
-@spacing-unit:     30px;
+@spacing-unit:       30px;
 
-@text-color:       #111;
-@background-color: #fdfdfd;
-@brand-color:      #2a7ae2;
+@text-color:         #111;
+@background-color:   #fdfdfd;
+@brand-color:        #2a7ae2;
 
-@black-color:      #777;
-@grey-color:       #828282;
-@grey-color-light: lighten(@grey-color, 40%);
-@grey-color-dark:  darken(@grey-color, 25%);
+@black-color:        #777;
+@grey-color:         #828282;
+@grey-color-light:   lighten(@grey-color, 40%);
+@grey-color-dark:    darken(@grey-color, 25%);
 
-@color-green:      #91e842;
-@color-lime-green: #d2ff52;
+// @color-green:        #91e842;
+@color-green:        #84C466;
+@color-lime-green:   #d2ff52;
+@color-black:        #222;
 
+@color-white:        #FFF;
+@color-gray:         #3e5b7c;
+@color-slate:        #587E9D;
+@color-blue:         #3BA4E0;
+@color-red:          #D95752;
+@color-purple:       #A66BA1;
+@color-primary:      @color-green;
+@brand-primary:      @color-primary;
 
-@headline-font: "Oswald", "Franklin Gothic", Impact, Helvetica, sans-serif;
+@headline-font:      "Oswald", "Franklin Gothic", Impact, Helvetica, sans-serif;
 
 
 
@@ -41,28 +51,34 @@
 
 }
 
+.abs-center(@width: 150px; @height: 150px;) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: @width;
+  height: @height;
+  margin-left: -(@width / 2);
+  margin-top: -(@height / 2);  
+}
 
 body, html {
   color: @black-color;
   position: relative;
   height: 100%;
-  .radial-gradient(@color-lime-green; @color-green);
+  // .radial-gradient(@color-lime-green; @color-green);
+  .radial-gradient(@color-slate, @color-gray);
 
 
 }
 a, a:visited {
-  color: #222;
+  color: @color-black;
 }
 .splash {
+  .abs-center(@width: 300px; @height: 200px;);
+  color: @color-white;
   font-family: @headline-font;
 
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 291px;
-  height: 96px;
-  margin-left: -146px;
-  margin-top: -96px;
+
 
   img {
     margin: 0 auto;
@@ -78,5 +94,23 @@ a, a:visited {
   p {
     text-align: center;
     a { font-weight: 400; }
+  }
+  .glyphicon { color: @color-primary; }
+  
+  @media screen and (min-width: @screen-sm) {
+    .abs-center(@width: 38%; @height: 300px;);
+    p { font-size: 1.25em; }
+  }
+  @media screen and (min-width: @screen-md) {
+  }
+}
+
+.button {
+  &, &:visited {
+    &:extend(.btn all);
+    &:extend(.btn-lg all);
+    &:extend(.btn-primary all);
+    // .button-variant(@color-green, @color-black, @color-black);
+    
   }
 }

@@ -10,7 +10,7 @@ var gulp =     require('gulp'),
 
 // Convert our LESS files to CSS
 gulp.task('less', function () {
-    gulp.src('./_src/less/app.less')
+    return gulp.src(['./_src/less/app.less'])
         .pipe(less({
             paths: [ path.join(__dirname, '_src', 'less', 'inc'), path.join(__dirname, 'bower_components') ]
         }).on('error', function (err) {
@@ -27,6 +27,7 @@ gulp.task('scripts', function() {
   return gulp.src([
       './bower_components/jquery/dist/jquery.js',
       './bower_components/jquery.scrollTo/jquery.scrollTo.js',
+      './bower_components/bootstrap/js/modal.js',
       './_src/js/inc/shoreline-faux-input-autofill.js',
       './_src/js/app.js'
     ])

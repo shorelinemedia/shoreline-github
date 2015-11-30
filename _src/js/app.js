@@ -7,7 +7,7 @@
     Parse.initialize("iMjNMIuFn4JVT1zmAyrmC6dMU7mTWpRj7NR9rhkP", "0yXGXWN2eqg7mObIsMFgYvQk4gyqUyBJicort2Yi");
 
     // Setup the form to watch for the submit event
-    $('.contact-form form').submit(function(e){
+    $('.contact-form').submit(function(e){
       e.preventDefault();
 
       // Grab the elements from the form to make up
@@ -22,12 +22,12 @@
       // pass our 'data' object to it
       Parse.Cloud.run("sendEmail", data, {
         success: function(object) {
-          $('#form-response').html('Email sent!').addClass('success').fadeIn('fast');
+          $('#form-response').html('Email sent!').removeClass('alert-danger').addClass('alert alert-success').fadeIn('fast');
         },
 
         error: function(object, error) {
           console.log(error);
-          $('#form-response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+          $('#form-response').html('Error! Email not sent!').removeClass('alert-success').addClass('alert alert-danger').fadeIn('fast');
         }
       });
     });
