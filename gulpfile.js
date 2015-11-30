@@ -25,9 +25,9 @@ gulp.task('less', function () {
 
 gulp.task('scripts', function() {
   return gulp.src([
-      './bower_components/jquery/dist/jquery.js',
+    //   './bower_components/jquery/dist/jquery.js',
       './bower_components/jquery.scrollTo/jquery.scrollTo.js',
-      './bower_components/bootstrap/js/modal.js',
+    //   './bower_components/bootstrap/js/modal.js',
       './_src/js/inc/shoreline-faux-input-autofill.js',
       './_src/js/app.js'
     ])
