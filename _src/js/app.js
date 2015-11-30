@@ -8,6 +8,7 @@
 
     // Setup the form to watch for the submit event
     $('.contact-form').submit(function(e){
+      var form = $(this);
       e.preventDefault();
 
       // Grab the elements from the form to make up
@@ -22,11 +23,13 @@
       // pass our 'data' object to it
       Parse.Cloud.run("sendEmail", data, {
         success: function(object) {
+          // Alert success
           $('#form-response').html('Email sent!').removeClass('alert-danger').addClass('alert alert-success').fadeIn('fast');
+          // Clear form values
+          form.find("input, select, textarea").val("");
         },
 
         error: function(object, error) {
-          console.log(error);
           $('#form-response').html('Error! Email not sent!').removeClass('alert-success').addClass('alert alert-danger').fadeIn('fast');
         }
       });
