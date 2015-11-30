@@ -29,10 +29,13 @@ permalink: /contact/
 </div>
 
 <script>
+(function() {
+
+  // Initialize Parse with your Parse application & javascript keys
+  Parse.initialize("xFxMfNpIfOjGD9pIFx7Q3jC0y8dSJgeJ8", "jhxWbls6wDXOiMO9ei5aj3NyFhPEbayjGRKmKsqm");
+
   $(document).ready(function(){
 
-    // Initialize Parse with your Parse application & javascript keys
-    Parse.initialize("xFxMfNpIfOjGD9pIFx7Q3jC0y8dSJgeJ8", "jhxWbls6wDXOiMO9ei5aj3NyFhPEbayjGRKmKsqm");
 
     // Setup the form to watch for the submit event
     $('.contact-form form').submit(function(e){
@@ -61,4 +64,5 @@ permalink: /contact/
     });
 
   });
+})(jQuery);
 </script>
