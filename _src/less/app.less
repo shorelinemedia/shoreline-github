@@ -76,14 +76,22 @@
 }
 
 body, html {
-  font-family: @system-font;
-  color: @black-color;
+
   position: relative;
   height: 100%;
+
+
+}
+
+html {
   // .radial-gradient(@color-lime-green; @color-green);
   .radial-gradient(@color-slate, @color-gray);
-
-
+  
+}
+body {
+  background-color: transparent;
+  font-family: @system-font;
+  color: @black-color;  
 }
 a, a:visited {
   color: @color-black;
