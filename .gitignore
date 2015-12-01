@@ -4,3 +4,4 @@ bower_components/
 node_modules/
 Thumbs.db
 .publish/
+_config_dev.yml
