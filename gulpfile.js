@@ -48,7 +48,10 @@ gulp.task('watch', function () {
 // Deploy the _site folder to our Github Pages site
 gulp.task('deploy', function() {
   return gulp.src('./_site/**/*')
-    .pipe(ghpages());
+    .pipe(ghpages({
+        remoteUrl: 'git@github.com:shorelinemedia/shorelinemedia.github.io.git',
+        branch: 'master'
+    }));
 });
 
 // Watch our project by default
