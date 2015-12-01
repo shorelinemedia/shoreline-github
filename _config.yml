@@ -7,7 +7,15 @@ url: "http://shorelinemedia.github.io" # the base hostname & protocol for your s
 twitter_username: shorelinenj
 github_username:  shoreline-media
 permalink: pretty
-exclude: ['Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules']
+exclude: ['Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules', 'Thumbs.db']
+
+compress_html:
+  clippings: []
+  comments: ["<!-- ", " -->"]
+  endings: []
+  profile: false
+  ignore:
+    envs: [local]
 
 prose:
   rooturl: '_posts'

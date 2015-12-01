@@ -6,7 +6,8 @@ var gulp =     require('gulp'),
     rename =   require('gulp-rename'),
     cleancss = require('gulp-cleancss'),
     path =     require('path'),
-    reload =   require('gulp-livereload');
+    reload =   require('gulp-livereload'),
+    ghpages =  require('gulp-gh-pages');
 
 // Convert our LESS files to CSS
 gulp.task('less', function () {
@@ -42,6 +43,12 @@ gulp.task('watch', function () {
     gulp.watch('./_src/less/**/*.less', ['less']);
     // Watch our script files
     gulp.watch('./_src/js/**/*.js', ['scripts']);
+});
+
+// Deploy the _site folder to our Github Pages site
+gulp.task('deploy', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(ghpages());
 });
 
 // Watch our project by default

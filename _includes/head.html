@@ -2,14 +2,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="theme-color" content="#3e5b7c">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- SEO Markup -->
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
+    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ "/assets/css/app.min.css" | prepend: site.baseurl }}">
+    
+    <!-- Base Favicon -->
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
+    
+    <!-- Avoid duplicate content penalties from Google if hosted at multiple URLs/domains -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    
+    <!-- Android Favorites Icon -->
     <link rel="icon" sizes="192x192" href="{{ "/images/icon-192x192.png" | prepend: site.baseurl }}">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon-precomposed" href="{{ "/images/apple-touch-icon-precomposed.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "/images/apple-touch-icon-72x72-precomposed.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/images/apple-touch-icon-114x114-precomposed.png" | prepend: site.baseurl }}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/images/apple-touch-icon-144x144-precomposed.png" | prepend: site.baseurl }}">
+    
+    <!-- Blog RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blog Feed" href="{{ "/blog.rss" | prepend: site.baseurl }}" />
+    
+    <!-- Scheme in JSON+LD (http://json-ld.org/playground/) -->
+    <script type='application/ld+json'>{
+      "@context":"http:\/\/schema.org",
+      "@type":"WebSite",
+      "url":"{{ site.url | json }}{{ "/" | prepend: site.baseurl | json }}",
+      "name":"{{ site.title }}"
+      /*, "potentialAction":{
+          "@type":"SearchAction",
+          "target":"http:\/\/www.safeinhome.com\/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }*/
+      }
+    </script>    
 </head>
