@@ -9,6 +9,8 @@ github_username:  shoreline-media
 permalink: pretty
 exclude: ['Gemfile', 'Gemfile.lock', 'bower_components', 'node_modules', 'Thumbs.db', 'gulpfile.js', 'bower.json', 'package.json', '/README.md', '/serve-c9', '/.publish']
 
+incremental: true
+
 compress_html:
   clippings: []
   comments: ["<!-- ", " -->"]
