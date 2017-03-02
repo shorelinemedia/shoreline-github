@@ -74,5 +74,4 @@ prose:
           label: "Permalink"
           value: ""
 
-# Build settings
-markdown: rdiscount
+
